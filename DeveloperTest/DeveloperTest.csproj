@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{988B42C2-DDA3-49A2-BCCA-98D7A1DF4C9D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DeveloperTest</RootNamespace>
+    <AssemblyName>DeveloperTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44343</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001071800303_kunal_07_01_2020_add_tbl_user_message.cs" />
+    <Compile Include="Migrations\202001071800303_kunal_07_01_2020_add_tbl_user_message.designer.cs">
+      <DependentUpon>202001071800303_kunal_07_01_2020_add_tbl_user_message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001071813249_kunal_07_01_2020_modify_tbl_message.cs" />
+    <Compile Include="Migrations\202001071813249_kunal_07_01_2020_modify_tbl_message.designer.cs">
+      <DependentUpon>202001071813249_kunal_07_01_2020_modify_tbl_message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001071849435_kunal_07_01_2020_modify_tbl_message_second_time.cs" />
+    <Compile Include="Migrations\202001071849435_kunal_07_01_2020_modify_tbl_message_second_time.designer.cs">
+      <DependentUpon>202001071849435_kunal_07_01_2020_modify_tbl_message_second_time.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DBContextMail.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\HomeService.cs" />
+    <Compile Include="Service\IHomeService.cs" />
+    <Compile Include="Service\IMessageService.cs" />
+    <Compile Include="Service\MessageService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\MailDB.mdf" />
+    <Content Include="App_Data\MailDB_log.ldf">
+      <DependentUpon>MailDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\Common\css\angular-growl.min.css" />
+    <Content Include="Content\Common\css\animate.min.css" />
+    <Content Include="Content\Common\css\bootstrap.css" />
+    <Content Include="Content\Common\css\bootstrap.min.css" />
+    <Content Include="Content\Common\css\jquery-ui.css" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\angularWayDataChange.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\angularWayDataChange.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\bindAngularDirective.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\bindAngularDirective.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\changeOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\changeOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\dataReloadWithAjax.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\dataReloadWithAjax.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\dataReloadWithPromise.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\dataReloadWithPromise.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\rowClickEvent.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\rowClickEvent.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\serverSideProcessing.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\advanced\serverSideProcessing.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\api\api.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\api\api.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\api\apiColumnBuilder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\api\apiColumnDefBuilder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\api\apiDefaultOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\api\apiOptionsBuilder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\app.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\angularWay.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\angularWay.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\angularWayWithOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\angularWayWithOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\overrideLoadingTpl.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\withAjax.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\withAjax.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\withOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\withOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\withPromise.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\withPromise.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\basic\zeroConfig.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\partials\gettingStarted.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\partials\sidebar.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\partials\welcome.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\sidebar.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\usages.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\bootstrapIntegration.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\bootstrapIntegration.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\overrideBootstrapOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\overrideBootstrapOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\withColReorder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\withColReorder.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\withColVis.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\withColVis.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\withResponsive.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\withResponsive.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\withScroller.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\withScroller.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\withTableTools.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\demo\withPlugins\withTableTools.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\dist\angular-datatables.min.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\dist\datatables.bootstrap.min.css" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\index.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\styles\main.css" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\angularWayDataChange.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\angularWayDataChange.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\bindAngularDirective.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\bindAngularDirective.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\changeOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\changeOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\dataReloadWithAjax.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\dataReloadWithAjax.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\dataReloadWithPromise.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\dataReloadWithPromise.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\disableDeepWatchers.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\disableDeepWatchers.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\loadOptionsWithPromise.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\loadOptionsWithPromise.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\rowClickEvent.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\rowClickEvent.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\rowSelect.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\rowSelect.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\serverSideProcessing.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\advanced\serverSideProcessing.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\api\api.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\api\api.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\api\apiColumnBuilder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\api\apiColumnDefBuilder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\api\apiDefaultOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\api\apiOptionsBuilder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\app.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\angularWay.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\angularWay.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\angularWayWithOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\angularWayWithOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\overrideLoadingTpl.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\withAjax.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\withAjax.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\withOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\withOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\withPromise.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\withPromise.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\basic\zeroConfig.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\partials\gettingStarted.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\partials\sidebar.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\partials\welcome.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\sidebar.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\usages.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\bootstrapIntegration.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\bootstrapIntegration.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\overrideBootstrapOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\overrideBootstrapOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withAngularTranslate.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withAngularTranslate.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withColReorder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withColReorder.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withColumnFilter.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withColumnFilter.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withColVis.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withColVis.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withResponsive.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withResponsive.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withScroller.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withScroller.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withTableTools.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\demo\withPlugins\withTableTools.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\index.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\styles\main.css" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\angularWayDataChange.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\angularWayDataChange.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\bindAngularDirective.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\bindAngularDirective.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\changeOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\changeOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\dataReloadWithAjax.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\dataReloadWithAjax.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\dataReloadWithPromise.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\dataReloadWithPromise.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\disableDeepWatchers.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\disableDeepWatchers.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\dtInstances.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\dtInstances.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\loadOptionsWithPromise.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\loadOptionsWithPromise.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\rerender.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\rerender.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\rowClickEvent.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\rowClickEvent.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\rowSelect.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\rowSelect.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\serverSideProcessing.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\advanced\serverSideProcessing.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\api\api.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\api\api.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\api\apiColumnBuilder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\api\apiColumnDefBuilder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\api\apiDefaultOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\api\apiDTInstances.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\api\apiOptionsBuilder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\app.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\angularWay.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\angularWay.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\angularWayWithOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\angularWayWithOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\overrideLoadingTpl.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\withAjax.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\withAjax.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\withOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\withOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\withPromise.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\withPromise.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\basic\zeroConfig.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\partials\gettingStarted.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\partials\sidebar.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\partials\welcome.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\sidebar.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\usages.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\bootstrapIntegration.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\bootstrapIntegration.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\overrideBootstrapOptions.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\overrideBootstrapOptions.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withAngularTranslate.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withAngularTranslate.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withColReorder.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withColReorder.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withColumnFilter.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withColumnFilter.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withColVis.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withColVis.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withFixedColumns.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withFixedColumns.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withFixedHeader.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withFixedHeader.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withResponsive.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withResponsive.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withScroller.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withScroller.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withTableTools.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\demo\withPlugins\withTableTools.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\index.html" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\styles\main.css" />
+    <Content Include="Content\Common\DataTables\demo\advanced\angularDirectiveInDOM.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\angularDirectiveInDOM.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\angularWayDataChange.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\angularWayDataChange.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\bindAngularDirective.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\bindAngularDirective.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\changeOptions.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\changeOptions.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\dataReloadWithAjax.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\dataReloadWithAjax.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\dataReloadWithPromise.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\dataReloadWithPromise.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\disableDeepWatchers.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\disableDeepWatchers.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\dtInstances.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\dtInstances.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\loadOptionsWithPromise.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\loadOptionsWithPromise.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\rerender.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\rerender.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\rowClickEvent.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\rowClickEvent.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\rowSelect.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\rowSelect.js" />
+    <Content Include="Content\Common\DataTables\demo\advanced\serverSideProcessing.html" />
+    <Content Include="Content\Common\DataTables\demo\advanced\serverSideProcessing.js" />
+    <Content Include="Content\Common\DataTables\demo\api\api.html" />
+    <Content Include="Content\Common\DataTables\demo\api\api.js" />
+    <Content Include="Content\Common\DataTables\demo\api\apiColumnBuilder.html" />
+    <Content Include="Content\Common\DataTables\demo\api\apiColumnDefBuilder.html" />
+    <Content Include="Content\Common\DataTables\demo\api\apiDefaultOptions.html" />
+    <Content Include="Content\Common\DataTables\demo\api\apiDTInstances.html" />
+    <Content Include="Content\Common\DataTables\demo\api\apiOptionsBuilder.html" />
+    <Content Include="Content\Common\DataTables\demo\app.js" />
+    <Content Include="Content\Common\DataTables\demo\basic\angularWay.html" />
+    <Content Include="Content\Common\DataTables\demo\basic\angularWay.js" />
+    <Content Include="Content\Common\DataTables\demo\basic\angularWayWithOptions.html" />
+    <Content Include="Content\Common\DataTables\demo\basic\angularWayWithOptions.js" />
+    <Content Include="Content\Common\DataTables\demo\basic\overrideLoadingTpl.html" />
+    <Content Include="Content\Common\DataTables\demo\basic\withAjax.html" />
+    <Content Include="Content\Common\DataTables\demo\basic\withAjax.js" />
+    <Content Include="Content\Common\DataTables\demo\basic\withOptions.html" />
+    <Content Include="Content\Common\DataTables\demo\basic\withOptions.js" />
+    <Content Include="Content\Common\DataTables\demo\basic\withPromise.html" />
+    <Content Include="Content\Common\DataTables\demo\basic\withPromise.js" />
+    <Content Include="Content\Common\DataTables\demo\basic\zeroConfig.html" />
+    <Content Include="Content\Common\DataTables\demo\partials\gettingStarted.html" />
+    <Content Include="Content\Common\DataTables\demo\partials\sidebar.html" />
+    <Content Include="Content\Common\DataTables\demo\partials\welcome.html" />
+    <Content Include="Content\Common\DataTables\demo\sidebar.js" />
+    <Content Include="Content\Common\DataTables\demo\usages.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\bootstrapIntegration.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\bootstrapIntegration.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\overrideBootstrapOptions.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\overrideBootstrapOptions.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withAngularTranslate.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withAngularTranslate.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withAngularTranslateSwitchLanguage.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withAngularTranslateSwitchLanguage.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withButtons.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withButtons.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withColReorder.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withColReorder.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withColumnFilter.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withColumnFilter.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withColVis.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withColVis.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withFixedColumns.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withFixedColumns.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withFixedHeader.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withFixedHeader.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withLightColumnFilter.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withLightColumnFilter.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withResponsive.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withResponsive.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withScroller.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withScroller.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withSelect.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withSelect.js" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withTableTools.html" />
+    <Content Include="Content\Common\DataTables\demo\withPlugins\withTableTools.js" />
+    <Content Include="Content\Common\DataTables\dist\angular-datatables.js" />
+    <Content Include="Content\Common\DataTables\dist\angular-datatables.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\bootstrap\angular-datatables.bootstrap.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\bootstrap\angular-datatables.bootstrap.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\bootstrap\datatables.bootstrap.css" />
+    <Content Include="Content\Common\DataTables\dist\plugins\bootstrap\datatables.bootstrap.min.css" />
+    <Content Include="Content\Common\DataTables\dist\plugins\buttons\angular-datatables.buttons.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\buttons\angular-datatables.buttons.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\colreorder\angular-datatables.colreorder.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\colreorder\angular-datatables.colreorder.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\columnfilter\angular-datatables.columnfilter.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\columnfilter\angular-datatables.columnfilter.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\colvis\angular-datatables.colvis.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\colvis\angular-datatables.colvis.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\fixedcolumns\angular-datatables.fixedcolumns.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\fixedcolumns\angular-datatables.fixedcolumns.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\fixedheader\angular-datatables.fixedheader.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\fixedheader\angular-datatables.fixedheader.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\light-columnfilter\angular-datatables.light-columnfilter.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\light-columnfilter\angular-datatables.light-columnfilter.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\scroller\angular-datatables.scroller.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\scroller\angular-datatables.scroller.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\select\angular-datatables.select.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\select\angular-datatables.select.min.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\tabletools\angular-datatables.tabletools.js" />
+    <Content Include="Content\Common\DataTables\dist\plugins\tabletools\angular-datatables.tabletools.min.js" />
+    <Content Include="Content\Common\DataTables\js\angular-animate.min.js" />
+    <Content Include="Content\Common\DataTables\js\angular-growl.min.js" />
+    <Content Include="Content\Common\DataTables\js\bootstrap.min.js" />
+    <Content Include="Content\Common\DataTables\js\jquery-ui.js" />
+    <Content Include="Content\Common\DataTables\js\jquery.min.js" />
+    <Content Include="Content\Common\DataTables\js\jquery.noty.packaged.min.js" />
+    <Content Include="Content\Common\DataTables\js\jquery.webcam.js" />
+    <Content Include="Content\Common\DataTables\js\jquery.webcam.min.js" />
+    <Content Include="Content\Common\DataTables\js\validation.js" />
+    <Content Include="Content\Common\DataTables\js\webcam.js" />
+    <Content Include="Content\Common\DataTables\src\angular-datatables.directive.js" />
+    <Content Include="Content\Common\DataTables\src\angular-datatables.factory.js" />
+    <Content Include="Content\Common\DataTables\src\angular-datatables.instances.js" />
+    <Content Include="Content\Common\DataTables\src\angular-datatables.js" />
+    <Content Include="Content\Common\DataTables\src\angular-datatables.options.js" />
+    <Content Include="Content\Common\DataTables\src\angular-datatables.renderer.js" />
+    <Content Include="Content\Common\DataTables\src\angular-datatables.util.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\bootstrap\angular-datatables.bootstrap.colvis.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\bootstrap\angular-datatables.bootstrap.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\bootstrap\angular-datatables.bootstrap.options.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\bootstrap\angular-datatables.bootstrap.tabletools.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\bootstrap\datatables.bootstrap.css" />
+    <Content Include="Content\Common\DataTables\src\plugins\buttons\angular-datatables.buttons.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\colreorder\angular-datatables.colreorder.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\columnfilter\angular-datatables.columnfilter.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\colvis\angular-datatables.colvis.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\fixedcolumns\angular-datatables.fixedcolumns.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\fixedheader\angular-datatables.fixedheader.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\light-columnfilter\angular-datatables.light-columnfilter.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\scroller\angular-datatables.scroller.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\select\angular-datatables.select.js" />
+    <Content Include="Content\Common\DataTables\src\plugins\tabletools\angular-datatables.tabletools.js" />
+    <Content Include="Content\Common\DataTables\styles\main.css" />
+    <Content Include="Content\Common\DataTables\vendor\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-bootstrap\ui-bootstrap.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-bootstrap\ui-bootstrap.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-highlightjs\angular-highlightjs.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-highlightjs\angular-highlightjs.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-mocks\angular-mocks.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-resource\angular-resource.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-resource\angular-resource.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-translate\angular-translate.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-translate\angular-translate.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\common.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\compat.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\resolve.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\state.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\stateDirectives.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\stateFilters.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\templateFactory.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\urlMatcherFactory.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\urlRouter.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\view.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\viewDirective.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\src\viewScroll.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular\angular-csp.css" />
+    <Content Include="Content\Common\DataTables\vendor\angular\angular.js" />
+    <Content Include="Content\Common\DataTables\vendor\angular\angular.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\backtotop\backtotop.min.css" />
+    <Content Include="Content\Common\DataTables\vendor\backtotop\backtotop.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\js\npm.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\Gruntfile.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\affix.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\alert.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\button.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\carousel.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\collapse.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\dropdown.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\modal.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\popover.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\scrollspy.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\tab.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\transition.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\css\buttons.dataTables.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\js\buttons.bootstrap.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\js\buttons.colVis.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\js\buttons.flash.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\js\buttons.foundation.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\js\buttons.html5.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\js\buttons.jqueryui.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\js\buttons.print.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\js\dataTables.buttons.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\License.txt" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colreorder\css\dataTables.colReorder.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colreorder\images\insert.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colreorder\js\dataTables.colReorder.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colreorder\Readme.txt" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-columnfilter\js\dataTables.columnFilter.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colvis\css\dataTables.colVis.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colvis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colvis\js\dataTables.colVis.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colvis\Readme.txt" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedcolumns\css\dataTables.fixedColumns.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedcolumns\js\dataTables.fixedColumns.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedcolumns\Readme.txt" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\css\fixedHeader.bootstrap.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\css\fixedHeader.dataTables.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\css\fixedHeader.foundation.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\css\fixedHeader.jqueryui.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\js\dataTables.fixedHeader.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\License.txt" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-light-columnfilter\dist\dataTables.lcf.datepicker.fr.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-light-columnfilter\dist\dataTables.lcf.datepicker.fr.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-light-columnfilter\dist\dataTables.lightColumnFilter.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-light-columnfilter\dist\dataTables.lightColumnFilter.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-responsive\css\dataTables.responsive.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-responsive\js\dataTables.responsive.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-scroller\css\dataTables.scroller.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-scroller\images\loading-background.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-scroller\js\dataTables.scroller.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-scroller\Readme.txt" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-select\css\select.dataTables.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-select\js\dataTables.select.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-select\License.txt" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\css\dataTables.tableTools.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\background.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\collection.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\collection_hover.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\copy.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\copy_hover.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\csv.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\csv_hover.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\pdf.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\pdf_hover.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\print.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\print_hover.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\xls.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\xls_hover.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\js\dataTables.tableTools.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\Readme.txt" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\src\dataTables.tableTools.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\src\TableTools.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\src\ZeroClipboard.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\swf\copy_csv_xls.swf" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\license.txt" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\css\dataTables.bootstrap.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\css\dataTables.bootstrap.min.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\css\dataTables.foundation.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\css\dataTables.foundation.min.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\css\dataTables.jqueryui.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\css\dataTables.jqueryui.min.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\css\jquery.dataTables.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\css\jquery.dataTables.min.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\images\favicon.ico" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\images\sort_asc.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\images\sort_asc_disabled.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\images\sort_both.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\images\sort_desc.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\images\sort_desc_disabled.png" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\js\dataTables.bootstrap.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\js\dataTables.bootstrap.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\js\dataTables.foundation.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\js\dataTables.foundation.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\js\dataTables.jqueryui.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\js\dataTables.jqueryui.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\js\jquery.dataTables.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\js\jquery.dataTables.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\js\jquery.js" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome-animation\dist\font-awesome-animation.css" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome-animation\dist\font-awesome-animation.min.css" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\highlight.pack.js" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\arta.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\ascetic.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\atelier-dune.dark.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\atelier-dune.light.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\atelier-forest.dark.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\atelier-forest.light.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\atelier-heath.dark.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\atelier-heath.light.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\atelier-lakeside.dark.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\atelier-lakeside.light.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\atelier-seaside.dark.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\atelier-seaside.light.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\brown_paper.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\brown_papersq.png" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\dark.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\default.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\docco.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\far.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\foundation.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\github.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\googlecode.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\idea.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\ir_black.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\magula.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\mono-blue.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\monokai.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\monokai_sublime.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\obsidian.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\paraiso.dark.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\paraiso.light.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\pojoaque.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\pojoaque.jpg" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\railscasts.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\rainbow.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\school_book.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\school_book.png" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\solarized_dark.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\solarized_light.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\sunburst.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\tomorrow-night-blue.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\tomorrow-night-bright.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\tomorrow-night-eighties.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\tomorrow-night.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\tomorrow.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\vs.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\xcode.css" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\styles\zenburn.css" />
+    <Content Include="Content\Common\DataTables\vendor\jquery\dist\jquery.js" />
+    <Content Include="Content\Common\DataTables\vendor\jquery\dist\jquery.min.js" />
+    <Content Include="Content\Common\DataTables\vendor\jquery\MIT-LICENSE.txt" />
+    <Content Include="Content\Common\js\angular-animate.min.js" />
+    <Content Include="Content\Common\js\angular-growl.min.js" />
+    <Content Include="Content\Common\js\bootstrap.min.js" />
+    <Content Include="Content\Common\js\jquery-ui.js" />
+    <Content Include="Content\Common\js\jquery.min.js" />
+    <Content Include="Content\Common\js\jquery.noty.packaged.min.js" />
+    <Content Include="Content\Common\js\jquery.webcam.js" />
+    <Content Include="Content\Common\js\jquery.webcam.min.js" />
+    <Content Include="Content\Common\js\validation.js" />
+    <Content Include="Content\Common\js\webcam.js" />
+    <Content Include="Content\Controllers\ArchiveMailController.js" />
+    <Content Include="Content\Controllers\SentMailController.js" />
+    <Content Include="Content\Controllers\InboxController.js" />
+    <Content Include="Content\Controllers\LoginController.js" />
+    <Content Include="Content\Modules\ArchiveMailModule.js" />
+    <Content Include="Content\Modules\SentMailModule.js" />
+    <Content Include="Content\Modules\InboxModule.js" />
+    <Content Include="Content\Modules\LoginModule.js" />
+    <Content Include="Content\Services\ArchiveMailService.js" />
+    <Content Include="Content\Services\SentMailService.js" />
+    <Content Include="Content\Services\InboxService.js" />
+    <Content Include="Content\Services\LoginService.js" />
+    <Content Include="Content\Theme\8.gif" />
+    <Content Include="Content\Theme\customcss.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\data.json" />
+    <Content Include="Content\Common\DataTables\archives\v0.2.x\data1.json" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\data.json" />
+    <Content Include="Content\Common\DataTables\archives\v0.3.x\data1.json" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\data.json" />
+    <Content Include="Content\Common\DataTables\archives\v0.4.x\data1.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-bootstrap\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-bootstrap\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-highlightjs\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-highlightjs\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-highlightjs\LICENSE" />
+    <Content Include="Content\Common\DataTables\vendor\angular-highlightjs\README.md" />
+    <Content Include="Content\Common\DataTables\vendor\angular-mocks\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-mocks\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-mocks\package.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-mocks\README.md" />
+    <Content Include="Content\Common\DataTables\vendor\angular-resource\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-resource\angular-resource.min.js.map" />
+    <Content Include="Content\Common\DataTables\vendor\angular-resource\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-resource\package.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-resource\README.md" />
+    <Content Include="Content\Common\DataTables\vendor\angular-translate\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-translate\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-translate\README.md" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\CHANGELOG.md" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\LICENSE" />
+    <Content Include="Content\Common\DataTables\vendor\angular-ui-router\README.md" />
+    <Content Include="Content\Common\DataTables\vendor\angular\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular\angular.min.js.gzip" />
+    <Content Include="Content\Common\DataTables\vendor\angular\angular.min.js.map" />
+    <Content Include="Content\Common\DataTables\vendor\angular\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular\package.json" />
+    <Content Include="Content\Common\DataTables\vendor\angular\README.md" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\grunt\.jshintrc" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\grunt\configBridge.json" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\.jscsrc" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\js\.jshintrc" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\.csscomb.json" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\.csslintrc" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\alerts.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\badges.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\bootstrap.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\breadcrumbs.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\button-groups.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\buttons.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\carousel.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\close.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\code.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\component-animations.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\dropdowns.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\forms.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\glyphicons.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\grid.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\input-groups.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\jumbotron.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\labels.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\list-group.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\media.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\alerts.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\buttons.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\center-block.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\forms.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\gradients.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\grid.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\image.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\labels.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\list-group.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\opacity.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\pagination.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\panels.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\resize.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\size.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\table-row.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\modals.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\navbar.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\navs.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\normalize.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\pager.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\pagination.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\panels.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\popovers.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\print.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\progress-bars.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\responsive-embed.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\responsive-utilities.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\scaffolding.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\tables.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\theme.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\thumbnails.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\tooltip.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\type.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\utilities.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\variables.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\less\wells.less" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\LICENSE" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\package.json" />
+    <Content Include="Content\Common\DataTables\vendor\bootstrap\README.md" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\css\buttons.bootstrap.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\css\buttons.dataTables.css.map" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\css\buttons.dataTables.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\css\buttons.foundation.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\css\buttons.jqueryui.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\css\common.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-buttons\css\mixins.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colreorder\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colreorder\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colreorder\make.sh" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colvis\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colvis\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-colvis\make.sh" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedcolumns\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedcolumns\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedcolumns\make.sh" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\.gitignore" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\css\fixedHeader.bootstrap.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\css\fixedHeader.dataTables.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\css\fixedHeader.foundation.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\css\fixedHeader.jqueryui.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\make.sh" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-fixedheader\Readme.md" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-light-columnfilter\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-light-columnfilter\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-responsive\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-responsive\.gitignore" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-responsive\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-responsive\css\dataTables.responsive.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-responsive\make.sh" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-responsive\Readme.md" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-scroller\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-scroller\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-scroller\make.sh" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-select\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-select\css\select.bootstrap.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-select\css\select.dataTables.css.map" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-select\css\select.dataTables.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-select\css\select.foundation.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-select\css\select.jqueryui.scss" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\.gitignore" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\as3\lib\AlivePDF.swc" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\as3\ZeroClipboard.as" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\as3\ZeroClipboardPdf.as" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\psd\collection.psd" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\psd\copy document.psd" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\psd\file_types.psd" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\images\psd\printer.psd" />
+    <Content Include="Content\Common\DataTables\vendor\datatables-tabletools\make.sh" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\Contributing.md" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\media\images\Sorting icons.psd" />
+    <Content Include="Content\Common\DataTables\vendor\datatables\Readme.md" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome-animation\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome-animation\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome-animation\package.json" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Common\DataTables\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\component.json" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\composer.json" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\LICENSE" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\Makefile" />
+    <Content Include="Content\Common\DataTables\vendor\highlightjs\README.md" />
+    <Content Include="Content\Common\DataTables\vendor\jquery\.bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\jquery\bower.json" />
+    <Content Include="Content\Common\DataTables\vendor\jquery\dist\jquery.min.map" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Message\Inbox.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Message\SentMail.cshtml" />
+    <Content Include="Views\Message\ArchiveMail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202001071800303_kunal_07_01_2020_add_tbl_user_message.resx">
+      <DependentUpon>202001071800303_kunal_07_01_2020_add_tbl_user_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001071813249_kunal_07_01_2020_modify_tbl_message.resx">
+      <DependentUpon>202001071813249_kunal_07_01_2020_modify_tbl_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001071849435_kunal_07_01_2020_modify_tbl_message_second_time.resx">
+      <DependentUpon>202001071849435_kunal_07_01_2020_modify_tbl_message_second_time.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3776</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44343/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
